@@ -5,6 +5,8 @@ import CadastroCliente from "./cadastro/CadastroCliente";
 import Get from "./controller/ClienteController";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./Login";
+import Busca from './Busca/index';
+import Pesquisa from './Pesquisa';
 
 
 function App() {
@@ -12,10 +14,13 @@ function App() {
   return (
     <><GlobalStyle/>
     <BrowserRouter>
+//essa pesquisa e por nome
+    <Pesquisa/>
     <Switch>
+    <Route path="/busca" component = {Busca}/>
     <Route path="/get" component={Get} />
-    <Route path="/" component={CadastroCliente}/>
-    <Route path="/Login" component={Login}/>
+    <Route path="/" exact component={CadastroCliente}/>
+    <Route path="/login"  component={Login}/>
     </Switch>
     </BrowserRouter>
     </>
