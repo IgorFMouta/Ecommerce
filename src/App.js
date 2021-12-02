@@ -7,22 +7,26 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 import Busca from './Busca/index';
 import Pesquisa from './Pesquisa';
+import Navbar from './StylesGlobal/Navbar-Footer/Navbar';
+import Footer from './StylesGlobal/Navbar-Footer/Footer';
 
 
 function App() {
 
   return (
     <><GlobalStyle/>
+      <Navbar/>
     <BrowserRouter>
 //essa pesquisa e por nome
     <Pesquisa/>
     <Switch>
-    <Route path="/busca" component = {Busca}/>
-    <Route path="/get" component={Get} />
+    <Route path="/busca" exact component = {Busca}/>
+    <Route path="/get" exact component={Get} />
     <Route path="/" exact component={CadastroCliente}/>
-    <Route path="/login"  component={Login}/>
+    <Route path="/login" exact  component={Login}/>
     </Switch>
     </BrowserRouter>
+    <Footer/>
     </>
 
   )
