@@ -6,8 +6,6 @@ height: 30px;
 border-radius: 5px;
 background-color: 	#A9A9A9;
 margin: 0px;
-
-
 &:hover {
     background-color: 	#FFFF00;
     transition: 1s;

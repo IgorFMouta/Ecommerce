@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
-import {Title, Div, Body, A} from "./styles";
-
+import {Title, Div, A} from "./styles";
+import {Button} from "../styles/styles";
+function Login (){
     return(
     <>
- <Body>
+ {/* <Body> */}
     <Div>
        <Title>Login</Title>
-           <input type ="text" placeholder="E-mail, Nome de Usuario"></input>
-           <input type ="text" placeholder="Senha cadastrada"></input>
+       <p/><input type ="text" placeholder="E-mail, Nome de Usuario"></input>
+           <p/><input type ="text" placeholder="Senha cadastrada"></input>
            <Link to="/">
-               <p><button>Logar</button></p>
+               <p><Button>Logar</Button></p>
            </Link>
      <p><A href="#">Criar conta</A></p>
         <Link to="/login/recuperar">Esqueceu  senha?</Link>
     </Div>
- </Body>
+ {/* </Body> */}
     </>
     )
 }
 
-export default login;
+export default Login;

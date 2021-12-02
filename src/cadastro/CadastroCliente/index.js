@@ -1,5 +1,8 @@
 import { useState } from "react"
 import api from "../../service/api";
+import {Div, Label, P, Input, Title} from "./styles";
+import "./styles.css";
+import {Button} from "../../styles/styles";
 
 function CadastroCliente() {
 
@@ -7,7 +10,7 @@ function CadastroCliente() {
     const [novoUsuario, setNovoUsuario] = useState();
     const [novoCpf, setNovoCpf] = useState();
     const [novoEmail, setNovoEmail] = useState();
-    // const [novaDataNascimento, setNovaDataNascimento] = useState();
+    const [novaDataNascimento, setNovaDataNascimento] = useState();
     const [novaRua, setNovaRua] = useState();
     const [novoNumero, setNovoNumero] = useState();
     const [novoComplemeto, setNovoComplemeto] = useState();
@@ -24,7 +27,7 @@ function CadastroCliente() {
             usuario: novoUsuario.toLowerCase(),
             cpf: novoCpf,
             email: novoEmail,
-            dataNascimento: "1992-02-01T00:00:00Z",
+            dataNascimento: new Date(novaDataNascimento).toISOString().split('.')[0] + 'Z',
             endereco: {
                 rua: novaRua,
                 numero: novoNumero,
@@ -45,38 +48,38 @@ function CadastroCliente() {
         }
     }
     return (
-        <>
-            <div>
+         <div>
+            <Div>
                 <form onSubmit={cadastrarCliente} >
-                    <label id="nome">Nome</label>
-                    <input type="text" id="nome" value={novoNomeCliente} onChange={e => setNovoNomeCliente(e.target.value)} placeholder="Digite o seu nome" autoComplete="off" />
-                    <label id="usuario">Usuario</label>
-                    <input type="text" id="usuario" value={novoUsuario} onChange={e => setNovoUsuario(e.target.value)} placeholder="Nome de usuário" autoComplete="off" />
-                    <label id="cpf">CPF</label>
-                    <input type="text" id="cpf" value={novoCpf} onChange={e => setNovoCpf(e.target.value)} placeholder="Digite o seu CPF(somente números)" autoComplete="off" maxlength="11" />
-                    <label id="email">E-mail</label>
-                    <input type="text" id="email" value={novoEmail} onChange={e => setNovoEmail(e.target.value)} placeholder="Digite o seu e-mail" autoComplete="off" />
-                    {/* <label id="dataNascimento">Data de Nascimento</label>
-                    <input type="date" id="dataNascimento" value={novaDataNascimento} onChange={e => setNovaDataNascimento(e.target.value)} placeholder="Digite sua data de nascimento" autoComplete="off" /> */}
-                    <label id="rua">Rua</label>
-                    <input type="text" id="rua" value={novaRua} onChange={e => setNovaRua(e.target.value)} placeholder="Digite a rua" autoComplete="off" />
-                    <label id="numero">Numero</label>
-                    <input type="text" id="numero" value={novoNumero} onChange={e => setNovoNumero(e.target.value)} placeholder="Digite o numero" autoComplete="off" />
-                    <label id="complemento">Complemento</label>
-                    <input type="text" id="complemento" value={novoComplemeto} onChange={e => setNovoComplemeto(e.target.value)} placeholder="Digite o complemento" autoComplete="off" />
-                    <label id="bairro">Bairro</label>
-                    <input type="text" id="bairro" value={novoBairro} onChange={e => setNovoBairro(e.target.value)} placeholder="Digite o bairro" autoComplete="off" />
-                    <label id="cidade">Cidade</label>
-                    <input type="text" id="cidade" value={novaCidade} onChange={e => setNovaCidade(e.target.value)} placeholder="Digite a cidade" autoComplete="off" />
-                    <label id="estado">Estado</label>
-                    <input type="text" id="estado" value={novoEstado} onChange={e => setNovoEstado(e.target.value)} placeholder="Digite o Estado" autoComplete="off" />
-                    <label id="cep">CEP</label>
-                    <input type="text" id="cep" value={novoCep} onChange={e => setNovoCep(e.target.value)} placeholder="Digite o Cep" autoComplete="off" />
-
-                    <button type="submit">Novo Cadastro</button>
+                    <Title className="cadastroc">Cadastro de Cliente</Title><P/>
+                    <Label id="nome">Nome:</Label><P/>
+                    <Input type="text" id="nome" value={novoNomeCliente} onChange={e => setNovoNomeCliente(e.target.value)} placeholder="Digite o seu nome" autoComplete="off" /><P/>
+                    <Label id="usuario">Usuario:</Label><P/>
+                    <Input type="text" id="usuario" value={novoUsuario} onChange={e => setNovoUsuario(e.target.value)} placeholder="Nome de usuário" autoComplete="off" /><P/>
+                    <Label id="cpf">CPF:</Label><P/>
+                    <Input type="text" id="cpf" value={novoCpf} onChange={e => setNovoCpf(e.target.value)} placeholder="Digite o seu CPF(somente números)" autoComplete="off" maxlength="11" /><P/>
+                    <Label id="email">E-mail:</Label><P/>
+                    <Input type="text" id="email" value={novoEmail} onChange={e => setNovoEmail(e.target.value)} placeholder="Digite o seu e-mail" autoComplete="off" /><P/>
+                    <Label id="dataNascimento">Data de Nascimento</Label>
+                    <Input type="date" id="dataNascimento" value={novaDataNascimento} onChange={e => setNovaDataNascimento(e.target.value)} placeholder="Digite sua data de nascimento" autoComplete="off" />
+                    <Label id="rua">Rua:</Label><P/>
+                    <Input type="text" id="rua" value={novaRua} onChange={e => setNovaRua(e.target.value)} placeholder="Digite a rua" autoComplete="off" /><P/>
+                    <Label id="numero">Numero:</Label><P/>
+                    <Input type="text" id="numero" value={novoNumero} onChange={e => setNovoNumero(e.target.value)} placeholder="Digite o numero" autoComplete="off" /><P/>
+                    <Label id="complemento">Complemento:</Label><P/>
+                    <Input type="text" id="complemento" value={novoComplemeto} onChange={e => setNovoComplemeto(e.target.value)} placeholder="Digite o complemento" autoComplete="off" /><P/>
+                    <Label id="bairro">Bairro:</Label><P/>
+                    <Input type="text" id="bairro" value={novoBairro} onChange={e => setNovoBairro(e.target.value)} placeholder="Digite o bairro" autoComplete="off" /><P/>
+                    <Label id="cidade">Cidade:</Label><P/>
+                    <Input type="text" id="cidade" value={novaCidade} onChange={e => setNovaCidade(e.target.value)} placeholder="Digite a cidade" autoComplete="off" /><P/>
+                    <Label id="estado">Estado:</Label><P/>
+                    <Input type="text" id="estado" value={novoEstado} onChange={e => setNovoEstado(e.target.value)} placeholder="Digite o Estado" autoComplete="off" /><P/>
+                    <Label id="cep">CEP:</Label><P/>
+                    <Input type="text" id="cep" value={novoCep} onChange={e => setNovoCep(e.target.value)} placeholder="Digite o Cep" autoComplete="off" /><p/>
+                    <Button type="submit">Novo Cadastro</Button>
                 </form>
-            </div>
-        </>
+            </Div>
+        </div>
     )
 }
 
