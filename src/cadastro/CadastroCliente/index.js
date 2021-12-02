@@ -2,7 +2,7 @@ import { useState } from "react"
 import api from "../../service/api";
 import {Div, Label, P, Input, Title} from "./styles";
 import "./styles.css";
-import {Button} from "../../styles/styles";
+import {Button} from "../../StylesGlobal/styles";
 
 function CadastroCliente() {
     const [cliente, setCliente] = useState({

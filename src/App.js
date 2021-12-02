@@ -1,6 +1,6 @@
 import React from 'react';
 // import PrimaryButton from "./styles/index";
-import GlobalStyle from "./styles/global"
+import GlobalStyle from "./StylesGlobal/styles"
 import CadastroCliente from "./cadastro/CadastroCliente";
 import Get from "./controller/ClienteController";
 import { BrowserRouter, Switch, Route } from "react-router-dom";

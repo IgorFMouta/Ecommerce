@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 // import {Title, Div, A} from "./styles";
-// import {Button} from "../styles/styles";
+// import {Button} from "../StylesGlobal/styles";
 // function Login (){
 //     return(
 //     <>
