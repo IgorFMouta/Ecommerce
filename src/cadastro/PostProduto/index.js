@@ -1,6 +1,8 @@
 import { useState } from "react"
 import api from "../../service/api";
 import "./styles.css"
+import { Div, Label, Title, P, Input } from "./styles"
+import {Button} from "../../StylesGlobal/styles"
 
 function CadastroProduto() {
 
@@ -39,30 +41,31 @@ function CadastroProduto() {
     }
     return (
         <>
-            <div>
+            <Div>
                 <form onSubmit={cadastrarProduto} >
-                    <label id="nome">Nome</label>
-                    <input type="text" id="nome" value={novoProduto} onChange={e => setNovoProduto(e.target.value)} placeholder="Digite nome do produto" autoComplete="off" />
-                    <label id="descricao">Descricao</label>
-                    <input type="text" id="descricao" value={novaDescricao} onChange={e => setNovaDescricao(e.target.value)} placeholder="Descrição" autoComplete="off" />
-                    <label id="qtdEstoque">Quantidade em Estoque</label>
-                    <input type="number" id="qtd_estoque" value={novoQtdEstoque} onChange={e => setNovoQtdEstoque(e.target.value)} placeholder="Quantidade em estoque" autoComplete="off" maxlength="11" />
-                    <label id="valor">Valor</label>
-                    <input type="number" id="valor" value={novoValor} onChange={e => setNovoValor(e.target.value)} placeholder="Digite o valor" autoComplete="off" />
-                    <label id="idCategoria">Id Categoria</label>
-                    <input type="number" id="IdCategoria" value={novaIdCategoria} onChange={e => setNovaIdCategoria(e.target.value)} placeholder="Digite o Id da categoria" autoComplete="off" />
-                    <label id="nomeCategoria">Nome Categoria</label>
-                    <input type="text" id="rua" value={novoNomeCategoria} onChange={e => setNovoNomeCategoria(e.target.value)} placeholder="Digite o nome da categoria" autoComplete="off" />
-                    <label id="idFuncionario">Id Funcionario</label>
-                    <input type="number" id="idFuncionario" value={novoIdFuncionario} onChange={e => setNovoIdFuncionario(e.target.value)} placeholder="Digite o id funcionario" autoComplete="off" />
-                    <label id="dataFabricacao">Data de fabricação</label>
-                    <input type="date" id="dataFabricacao" value={novaDataFabricacao} onChange={e => setNovaDataFabricacao(e.target.value)} placeholder="Digite o id funcionario" autoComplete="off" />
-                    <label id="fotoLink">Imagem do Produto</label>
-                    <input type="text" id="fotoLink" value={novaImagemProduto} onChange={e => setNovaImagemProduto(e.target.value)} placeholder="Digite o link da imagem" autoComplete="off" />
+                <Title className="cadastro">Cadastro de Produto</Title><P/>
+                    <Label id="nome">Nome</Label>
+                    <Input type="text" id="nome" value={novoProduto} onChange={e => setNovoProduto(e.target.value)} placeholder="Digite nome do produto" autoComplete="off" />
+                    <Label id="descricao">Descricao</Label>
+                    <Input type="text" id="descricao" value={novaDescricao} onChange={e => setNovaDescricao(e.target.value)} placeholder="Descrição" autoComplete="off" />
+                    <Label id="qtdEstoque">Quantidade em Estoque</Label>
+                    <Input type="number" id="qtd_estoque" value={novoQtdEstoque} onChange={e => setNovoQtdEstoque(e.target.value)} placeholder="Quantidade em estoque" autoComplete="off" maxlength="11" />
+                    <Label id="valor">Valor</Label>
+                    <Input type="number" id="valor" value={novoValor} onChange={e => setNovoValor(e.target.value)} placeholder="Digite o valor" autoComplete="off" />
+                    <Label id="idCategoria">Id Categoria</Label>
+                    <Input type="number" id="IdCategoria" value={novaIdCategoria} onChange={e => setNovaIdCategoria(e.target.value)} placeholder="Digite o Id da categoria" autoComplete="off" />
+                    <Label id="nomeCategoria">Nome Categoria</Label>
+                    <Input type="text" id="rua" value={novoNomeCategoria} onChange={e => setNovoNomeCategoria(e.target.value)} placeholder="Digite o nome da categoria" autoComplete="off" />
+                    <Label id="idFuncionario">Id Funcionario</Label>
+                    <Input type="number" id="idFuncionario" value={novoIdFuncionario} onChange={e => setNovoIdFuncionario(e.target.value)} placeholder="Digite o id funcionario" autoComplete="off" />
+                    <Label id="dataFabricacao">Data de fabricação</Label>
+                    <Input type="date" id="dataFabricacao" value={novaDataFabricacao} onChange={e => setNovaDataFabricacao(e.target.value)} placeholder="Digite o id funcionario" autoComplete="off" />
+                    <Label id="fotoLink">Imagem do Produto</Label>
+                    <Input type="text" id="fotoLink" value={novaImagemProduto} onChange={e => setNovaImagemProduto(e.target.value)} placeholder="Digite o link da imagem" autoComplete="off" />
 
-                    <button type="submit">Novo Cadastro</button>
+                    <Button type="submit">Novo Cadastro</Button>
                 </form>
-            </div>
+            </Div>
         </>
     )
 }
