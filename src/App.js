@@ -8,6 +8,8 @@ import Login from "./Login";
 import Busca from './Busca/index';
 // import Pesquisa from './Pesquisa';
 import Header from './StylesGlobal/Navbar-Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComp from './Components/NavbarComp';
 
 
 
@@ -15,17 +17,7 @@ function App() {
 
   return (
     <>
-    <GlobalStyle/>
-    <Header/>
-    <BrowserRouter>
-    {/* <Pesquisa/> */}
-    <Switch>
-    <Route path="/busca" exact component = {Busca}/>
-    <Route path="/get" exact component={GetCliente} />
-    <Route path="/" exact component={CadastroCliente}/>
-    <Route path="/login" exact  component={Login}/>
-    </Switch>
-    </BrowserRouter>
+      <NavbarComp />
     </>
   )
 }
