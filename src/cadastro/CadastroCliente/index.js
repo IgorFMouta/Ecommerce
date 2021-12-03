@@ -20,16 +20,15 @@ function CadastroCliente() {
             estado: "",
             cep: "",
         },
-
     })
     async function cadastrarCliente(e) {
         e.preventDefault();
-       
+        var clientePost ={...cliente,dataNascimento:new Date(cliente.dataNascimento).toISOString().split('.')[0] + 'Z'}   
         try {
-            await api.post(`cliente`, cliente);
+            await api.post(`cliente`, clientePost);
             alert('Cliente Cadastrado com Sucesso');
 
-        } catch (error) {
+        } catch (error) {   
             alert('Erro ao Cadastrar Cliente');
         }
     }

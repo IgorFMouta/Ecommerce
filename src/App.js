@@ -1,6 +1,6 @@
 import React from 'react';
 // import PrimaryButton from "./styles/index";
-import GlobalStyle from "./StylesGlobal/styles"
+import GlobalStyle from "./StylesGlobal/styles";
 import CadastroCliente from "./cadastro/CadastroCliente";
 import Get from "./controller/ClienteController";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -14,10 +14,10 @@ import Footer from './StylesGlobal/Navbar-Footer/Footer';
 function App() {
 
   return (
-    <><GlobalStyle/>
-      <Navbar/>
+    <>
+    <GlobalStyle/>
+    <Navbar/>
     <BrowserRouter>
-//essa pesquisa e por nome
     <Pesquisa/>
     <Switch>
     <Route path="/busca" exact component = {Busca}/>
