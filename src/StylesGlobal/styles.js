@@ -8,18 +8,29 @@ export const Button = styled.button`
         background-color: 	#A9A9A9;
         margin: 0px;
         &:hover {
-            background-color: 	#FFFF00;
-            transition: 1s;
-            margin: 10px;
-}
-`
+        background-color: 	#FFFF00;
+        transition: 1s;
+        margin: 10px;
+        }
+`;
 
 export default createGlobalStyle `
     body {
+<<<<<<< HEAD
         background-image: url("https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background%20Login.png?raw=true");
         background-repeat: no-repeat;
         background-size: 100%;
+=======
+        margin: 0;
+        position: flex;
+        bottom: 0px;
+        right: 0px;
+        background-repeat:no-repeat;
+>>>>>>> 5dc14e9217c0f47187a66acd3c3287a2bdf21820
         background-color: #808080;
         max-width: max-content;
     }
-`
+`;
+// export const Bckimg = styled.image`
+//         img("https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background%20Login.png?raw=true");
+// `;
