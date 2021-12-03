@@ -1,18 +1,21 @@
-.navbar { 
-
+.navbar {
+    display: flex !important;
     justify-content: space-between;
-    background-color: #fff;
+    /* background-color: #fff !important; */
     padding: 1em;
     flex-wrap: wrap;
     align-items: top;
     text-align: top;
+    margin-top: 0;
+    position: static;
+    max-width: max-content;
 }
 
 .list {
     display: flex;
     flex-direction: column;
     list-style: none;
-    align-items: top;  
+    align-items: top;
 }
 
 .item {
@@ -20,7 +23,7 @@
 }
 
 .item a {
-    color: #FFF;
+    /* color: #FFF; */
     text-decoration: none;
 }
 

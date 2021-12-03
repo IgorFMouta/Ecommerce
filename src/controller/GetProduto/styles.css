@@ -1,0 +1,46 @@
+body{
+    background-color: gray;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 130px;
+    height: 150px;
+    border-radius: 5%;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    box-shadow: 1px 2px 30px;
+    border-radius: 5%;
+    display: block !important;
+    justify-content: center;
+    width: 320px;
+    height: 470px;
+    margin: 30px;
+}
+
+.Components {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: block !important;
+    margin-bottom: 20px;
+}
+.texto {
+    margin-left: 20px;
+    display: block !important;
+    max-width: max-content;
+}
+
+p {
+    color: black;
+    margin: 0;
+}
+
+.App {
+    display: block;
+}

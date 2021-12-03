@@ -17,8 +17,9 @@ export const Button = styled.button`
 export default createGlobalStyle `
     body {
         background-image: url("https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background%20Login.png?raw=true");
-        background-repeat:no-repeat;
+        background-repeat: no-repeat;
         background-size: 100%;
         background-color: #808080;
+        max-width: max-content;
     }
 `

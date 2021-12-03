@@ -1,7 +1,7 @@
 .container{
     width: 1200px;
-    display: flex;
-    justify-content: space-around;
+    display: block !important;
+    justify-content: center;
     margin: 0 auto;
     flex-wrap: wrap;
 }
@@ -10,11 +10,9 @@
     min-height: 75%;
 }
 
-.start{
-    justify-content: flex-start;
-}
 
-.column{
-    flex-direction: column;
-    justify-content: flex-start;
-}
+/* .column{
+    display: block !important;
+    flex-direction: column !important;
+    justify-content: center;
+} */

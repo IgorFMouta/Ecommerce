@@ -1,9 +1,10 @@
-.footer {
+.styles.footer {
     background-color: #222;
     color: #fff;
     padding: 3em;
     text-align: center;
     flex-wrap: wrap;
+    display: flex !important;
 }
 
 .social_list {

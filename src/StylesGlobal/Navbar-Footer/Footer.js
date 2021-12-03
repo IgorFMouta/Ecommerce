@@ -11,7 +11,7 @@ Footer básico, com poucos componentes, usando os simbolos de
 
 function Footer () {
     return (
-    <footer className={styles.footer}>
+    <footer className="styles.footer">
         <ul className={styles.social_list}>
             <li>
                 <FaFacebook />
