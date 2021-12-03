@@ -3,7 +3,7 @@ import React from 'react';
 import GlobalStyle from "./StylesGlobal/styles";
 import Backimg from "./StylesGlobal/styles";
 import CadastroCliente from "./cadastro/CadastroCliente";
-import Get from "./controller/ClienteController";
+import GetCliente from "./controller/ClienteController";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 import Busca from './Busca/index';
@@ -22,7 +22,7 @@ function App() {
     {/* <Pesquisa/> */}
     <Switch>
     <Route path="/busca" exact component = {Busca}/>
-    <Route path="/get" exact component={Get} />
+    <Route path="/get" exact component={GetCliente} />
     <Route path="/" exact component={CadastroCliente}/>
     <Route path="/login" exact  component={Login}/>
     </Switch>
