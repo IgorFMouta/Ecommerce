@@ -33,7 +33,7 @@ function CadastroCliente() {
         }
     }
     return (
-        <div>
+        <div className="divC">
         <Div>
             <form onSubmit={cadastrarCliente} >
                 <Title className="cadastroc">Cadastro de Cliente</Title><P/>
