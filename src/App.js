@@ -1,7 +1,6 @@
 import React from 'react';
 // import PrimaryButton from "./styles/index";
 import GlobalStyle from "./StylesGlobal/styles";
-import Backimg from "./StylesGlobal/styles";
 import CadastroCliente from "./cadastro/CadastroCliente";
 import GetCliente from "./controller/ClienteController";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -27,11 +26,9 @@ function App() {
     <Route path="/login" exact  component={Login}/>
     </Switch>
     </BrowserRouter>
-    <Backimg/>
-
     </>
-
   )
-
 }
+
 export default App;
+

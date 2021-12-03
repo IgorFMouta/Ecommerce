@@ -29,6 +29,3 @@ export default createGlobalStyle `
         max-width: max-content;
     }
 `;
-// export const Bckimg = styled.image`
-//         img("https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background%20Login.png?raw=true");
-// `;
