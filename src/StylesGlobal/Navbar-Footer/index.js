@@ -1,15 +1,19 @@
 import React from 'react'
 import logo from "../img/logo.png"
-import {Div,H1} from "./styles"
+import { Div, H1, H2 } from "./styles"
+import { Button } from "../../StylesGlobal/styles";
 
- const  Header = () => {
+const Header = () => {
     return (
-        
         <H1>
-            <Div className="header">
-                    <img className="logo" src={logo} alt="Umbreon Logo" width ="60px" height ="60px"/>
-                <button className="salmon-btn">+ INFO</button>
+            <Div>
+                <img className="logo" src={logo} alt="Umbreon Logo" width="70px" height="70px" />
             </Div>
+            <H2 className="navegacao" alt="Botões de Navegação">
+                <Button type="submit">Novo Cadastro</Button>
+                <Button type="submit">Controller</Button>
+                <Button type="submit">Login</Button>
+            </H2>
         </H1>
     )
 }
