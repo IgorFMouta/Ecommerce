@@ -10,6 +10,7 @@ import styled from "styled-components";
      border-radius: 5% 0;
      box-shadow: 1px 2px 20px #000, 2px 6px 50px #000;
      padding: 50px 20px;
+     margin-top: 100px;
 
  `;
  export const Label = styled.label`
