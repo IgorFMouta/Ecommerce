@@ -46,7 +46,7 @@ function CadastroCliente() {
                     <Label id="email">E-mail</Label><P/>
                     <Input type="text" name="email" onChange={(e) => { setCliente({ ...cliente, email: e.target.value }) }} placeholder="Digite o seu e-mail" autoComplete="off" /><P/>
                     <Label id="dataNascimento">Data de Nascimento</Label><P/>
-                    <Input type="text" name="dataNascimento" onChange={(e) => { setCliente({ ...cliente, dataNascimento: e.target.value }) }} placeholder="Digite sua data de nascimento" autoComplete="off" /><P/>
+                    <Input type="date" name="dataNascimento" onChange={(e) => { setCliente({ ...cliente, dataNascimento: e.target.value }) }} placeholder="Digite sua data de nascimento" autoComplete="off" /><P/>
                     <Label id="rua">Rua</Label><P/>
                     <Input type="text" name="rua" onChange={(e) => { setCliente({ ...cliente, endereco: { ...cliente.endereco, rua: e.target.value } }) }} placeholder="Digite a rua" autoComplete="off" /><P/>
                     <Label id="numero">Numero</Label><P/>
