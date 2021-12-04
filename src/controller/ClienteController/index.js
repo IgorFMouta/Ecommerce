@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../../service/api";
+import "./style.css"
+import {Button} from "../../StylesGlobal/styles"
 
 
   function GetCliente() {
@@ -23,7 +25,7 @@ import api from "../../service/api";
           {clientes.map(cliente => {
             return (
 
-              <div>
+              <div className="container">
                 <p>ID: {cliente?.id}</p>
                 <p>Nome: {cliente?.nome}</p>
                 <p>Usuario: {cliente?.usuario}</p>
@@ -37,7 +39,7 @@ import api from "../../service/api";
                 <p>Cidade: {cliente?.endereco.cidade}</p>
                 <p>Estado: {cliente?.endereco.estado}</p>
                 <p>Cep: {cliente?.endereco.cep}</p>
-                <button onClick={()=> deletarCliente(cliente.id)}>Deletar item</button>
+                <Button onClick={()=> deletarCliente(cliente.id)}>Deletar item</Button>
               </div>
             )
           })}

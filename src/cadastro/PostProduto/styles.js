@@ -10,6 +10,7 @@ width: 350px;
  border-radius: 5% 0;
  box-shadow: 1px 2px 20px #000, 2px 6px 50px #000;
  padding: 50px 20px;
+ margin-top: 100px;
 
 `;
 
@@ -40,8 +41,9 @@ margin-top: 0;
 
 export const Input = styled.input`
 width: 300px;
+background-color: #fff;
 &:hover {
-background-color: 	#FFFACD;
+background-color: 	#FFF;
 transition: 1s;
 margin: 3px;
 }

@@ -7,13 +7,11 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./Login";
 import Busca from './Busca/index';
 // import Pesquisa from './Pesquisa';
-import Header from './StylesGlobal/Navbar-Footer/index';
 import CadastroProduto from "./cadastro/PostProduto/index"
 import Get from "./controller/GetProduto/index"
-
-import Header from './StylesGlobal/Navbar-Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './Components/NavbarComp';
+import "./styles.css"
 
 
 
@@ -24,12 +22,11 @@ function App() {
     <>
 
       <GlobalStyle />
-      <Header />
       <BrowserRouter>
+      <NavbarComp />
         {/* <Pesquisa/> */}
         <Switch>
           <Route path="/busca" exact component={Busca} />
-          <Route path="/header" exact component={Header} />
           <Route path="/getClientes" exact component={GetCliente} />
           <Route path="/getProduto" exact component={Get} />
           <Route path="/cadastrarCliente" exact component={CadastroCliente} />
@@ -37,8 +34,8 @@ function App() {
           <Route path="/" exact component={Login} />
         </Switch>
       </BrowserRouter>
+      <img className="background" src="https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background.png?raw=true" />
 
-      <NavbarComp />
 
     </>
   )

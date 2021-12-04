@@ -6,11 +6,11 @@ export const Button = styled.button`
         height: 30px;
         border-radius: 5px;
         background-color: 	#A9A9A9;
-        margin: 0px;
+        margin: 10px;
         &:hover {
         background-color: 	#FFFF00;
         transition: 1s;
-        margin: 10px;
+        margin: 15px;
         }
 `;
 

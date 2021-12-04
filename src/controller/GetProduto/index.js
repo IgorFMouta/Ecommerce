@@ -34,7 +34,7 @@ function Get() {
           return(
             <div className="container">
               <div className="Components">
-                <img src={produto?.fotoLink} alt={produto?.descricao}/>
+                <img className="fotoLink" src={produto?.fotoLink} alt={produto?.descricao}/>
               </div>  
               <div className="texto">
                 <p>Nome: {produto?.nome}</p>

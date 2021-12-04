@@ -1,24 +1,21 @@
 import React, { Component } from 'react'
-import { Navbar, NavDropdown, Form, FormControl, Button, Nav } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
+import { Button } from "../StylesGlobal/styles"
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
 } from "react-router-dom";
+import "./styles.css"
 
-import Home from './Home';
-import Contact from './Contact';
-import About from './About'
 
 export default class NavbarComp extends Component {
     render() {
         return (
-            <Router>
-                <div>
+            <Switch>
+                <Router>
+                    <div className="containerNav">
 
                     <Navbar bg="dark" variant={"dark"} expand="lg">
-                        <Navbar.Brand href="#">Navbar Demo Arjun Codes</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
@@ -26,29 +23,32 @@ export default class NavbarComp extends Component {
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
-                                <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                                <Nav.Link as={Link} to="/about">About</Nav.Link>
-                                <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+                                
+                                <a href="http://localhost:3000/getProduto">
+                                    <Button>Pagina inicial</Button>
+                                </a>
+                                <a href="http://localhost:3000/getClientes">
+                                    <Button>Controle de Clientes</Button>
+                                </a>
+                                <a href="http://localhost:3000/cadastrarCliente">
+                                    <Button>Cadastro de cliente</Button>
+                                </a>
+                                <a href="http://localhost:3000/cadastrarProduto">
+                                    <Button>Cadastro de Produto</Button>
+                                </a>
 
+                                <div className="nomeNav">
+                                    <Navbar.Brand><p className="navName">Umbreon Gestor</p></Navbar.Brand>
+                                </div>
+
+                                <img className="logoUmbreon" src="https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/logo.png?raw=true" alt="logo umbreon" />
                             </Nav>
 
                         </Navbar.Collapse>
                     </Navbar>
-                </div>
-                <div>
-                    <Switch>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/contact">
-                            <Contact />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
+                    </div>
+                </Router>
+            </Switch>
         )
     }
 }

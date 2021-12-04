@@ -24,7 +24,7 @@ input, button {
     align-items: center;
     justify-content: center;
     /*Cor de fundo geral*/
-    background-color: #2e2e2e;
+    background-color: gray;
 }
 
 .formLogin {

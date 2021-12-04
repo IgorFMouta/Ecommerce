@@ -41,6 +41,7 @@ function CadastroProduto() {
     }
     return (
         <>
+        <div className="divC">
             <Div>
                 <form onSubmit={cadastrarProduto} >
                 <Title className="cadastro">Cadastro de Produto</Title><P/>
@@ -66,6 +67,7 @@ function CadastroProduto() {
                     <Button type="submit">Novo Cadastro</Button>
                 </form>
             </Div>
+            </div>
         </>
     )
 }

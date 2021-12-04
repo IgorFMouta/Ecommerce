@@ -40,6 +40,7 @@ export const P = styled.p`
 
 export const Input = styled.input`
     width: 300px;
+    background-color: #fff;
     &:hover {
     background-color: 	#FFFACD;
     transition: 1s;
