@@ -48,7 +48,7 @@ input, button {
     position: relative;
     display: block;
         /*Cor de fundo do formulário*/
-    background-color:#131313;
+    background-color:#222222;
     padding: 30px;
     z-index: 2;
 }
@@ -56,14 +56,15 @@ input, button {
 .formLogin .form-inner h2 {
     /*Cor da letra do login*/
     color: rgb(253, 164, 0);
-    font-size: 28px;
+    font-size: 50px;
     font-weight: 500;
     margin-bottom: 30px
 }
 
 .formLogin .form-inner .form-group{
     display: block;
-    width: 300px;
+    width: 500px;
+    height: 100px;
     margin-bottom: 15px;
 }
 
@@ -71,7 +72,7 @@ input, button {
     display: block;
     /*Cor das letras (Nome, Email, Senha)*/
     color: rgb(255, 187, 0);
-    font-size: 12px;
+    font-size: 20px;
     margin-bottom: 5px;
     transition: 0.4s;
 }

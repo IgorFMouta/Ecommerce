@@ -11,11 +11,9 @@ import CadastroProduto from "./cadastro/PostProduto/index"
 import AtualizarProduto from "./cadastro/AtualizarProduto/index"
 import Get from "./controller/GetProduto/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './Components/NavbarComp';
+
 import "./styles.css"
-
-
-
+import NavBar from './Components/Navbar';
 
 function App() {
 
@@ -36,6 +34,10 @@ function App() {
           <Route path="/cadastrarCliente" component={CadastroCliente} />
           <Route path="/cadastrarProduto" component={CadastroProduto} />
           <Route path="/atualizarProduto/:id+" component={AtualizarProduto} />
+        </Switch>
+        <Switch>        
+          <Route path="/" exact component={Login} />
+          <NavBar />
         </Switch>
          <img className="background" src="https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background.png?raw=true" />
       </BrowserRouter>

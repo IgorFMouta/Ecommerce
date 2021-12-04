@@ -18,6 +18,9 @@ export default createGlobalStyle `
     body {
         background-repeat:no-repeat;
         background-color: #808080;
+<<<<<<< HEAD
         flex-wrap: wrap;
+=======
+>>>>>>> bc61240ca4c1e8801a0cf1b081186d87e3e062ba
     }
 `;

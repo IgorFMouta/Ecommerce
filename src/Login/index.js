@@ -47,7 +47,7 @@ function Login (){
                 <h2>Bem vindo, <span>{user.name}!</span></h2>                     
                 <button onClick={Logout}>LOGOUT</button>
                 <Link to="/getProduto">
-                    <Button>CONTINUAR</Button>
+                    <button>continuar</button>
                 </Link>
             </div>
         ) : (
