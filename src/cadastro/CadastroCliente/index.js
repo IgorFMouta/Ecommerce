@@ -65,6 +65,7 @@ function CadastroCliente() {
                     <Button type="submit">Novo Cadastro</Button>
                     </form>
             </Div>
+            
         </div>
     )
 }

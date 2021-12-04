@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import api from "../../service/api"
 import "./styles.css"
 import {Button} from "../../StylesGlobal/styles"
+import {Link} from "react-router-dom"
 
 function Get() {
     const [produtos, setProdutos] = useState([]);
@@ -17,12 +18,6 @@ function Get() {
           await api.delete(`produto/${id}`);
           const produtosFiltrados = produtos.filter(produto => produto.id !== id)
           setProdutos(produtosFiltrados);
-      }
-
-      async function atualizarProduto(id){
-        const article = { title: 'React PUT Request'};
-        await api.put(`produto/${id}`, article).then(response => setProdutos({ 
-          updateAt: response.data.updateAt }));
       }
 
   
@@ -47,8 +42,11 @@ function Get() {
                 <p>Nome do Funcionario: {produto?.nomeFuncionario}</p>
                 <p>Data de fabricação: {produto?.dataFabricacao}</p>
                 <Button onClick={() => deletarProduto(produto.id)}>Deletar item</Button>
-                <Button onClick={() => atualizarProduto(produto.id)}>Atualizar item</Button>
+                <Link to={`/atualizarProduto/${produto.id}`}>
+                  <Button>Atualizar item</Button>
+                </Link>
               </div>
+
               </div>
           )
         })}

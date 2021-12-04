@@ -44,6 +44,7 @@ import {Button} from "../../StylesGlobal/styles"
             )
           })}
         </div>
+          <img className="background" src="https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background.png?raw=true" />
       </>
     )
 
