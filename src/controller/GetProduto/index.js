@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import api from "../../service/api"
 import "./styles.css"
+import {Button} from "../../StylesGlobal/styles"
 
 function Get() {
     const [produtos, setProdutos] = useState([]);
@@ -45,8 +46,8 @@ function Get() {
                 <p>Id do Funcionario: {produto?.idFuncionario}</p>
                 <p>Nome do Funcionario: {produto?.nomeFuncionario}</p>
                 <p>Data de fabricação: {produto?.dataFabricacao}</p>
-                <button onClick={() => deletarProduto(produto.id)}>Deletar item</button>
-                <button onClick={() => atualizarProduto(produto.id)}>Atualizar item</button>
+                <Button onClick={() => deletarProduto(produto.id)}>Deletar item</Button>
+                <Button onClick={() => atualizarProduto(produto.id)}>Atualizar item</Button>
               </div>
               </div>
           )

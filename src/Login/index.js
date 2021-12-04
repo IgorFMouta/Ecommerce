@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react/cjs/react.development";
 import LoginForm from "./LoginForm";
 import './estilo.css';
+import { Link } from "react-router-dom";
+import {Button} from "../StylesGlobal/styles"
 
 
 function Login (){
@@ -19,7 +21,7 @@ function Login (){
     
     const Login = details => {
         console.log(details);
-        if (details.email == adminUser.email && details.password == adminUser.password){
+        if (details.email === adminUser.email && details.password === adminUser.password){
             console.log("Logged in");
             setUser({
                 name:details.name,
@@ -40,11 +42,13 @@ function Login (){
 
     return(
         <div className="AppLogin">
-            {(user.email != "") ? (
+            {(user.email !== "") ? (
             <div className="welcome">                          
                 <h2>Bem vindo, <span>{user.name}!</span></h2>                     
                 <button onClick={Logout}>LOGOUT</button>
-                <button>CONTINUAR</button>
+                <Link to="/getProduto">
+                    <Button>CONTINUAR</Button>
+                </Link>
             </div>
         ) : (
             <LoginForm Login={Login} error={error} />

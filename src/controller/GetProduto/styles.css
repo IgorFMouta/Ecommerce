@@ -16,7 +16,8 @@ img {
     background-color: white;
     box-shadow: 1px 2px 30px;
     border-radius: 5%;
-    display: block !important;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 320px;
     height: 470px;
@@ -42,5 +43,6 @@ p {
 }
 
 .App {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
