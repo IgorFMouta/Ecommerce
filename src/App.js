@@ -4,10 +4,11 @@ import CadastroCliente from "./cadastro/CadastroCliente";
 import GetCliente from "./controller/ClienteController";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./Login";
-import CadastroProduto from "./cadastro/PostProduto/index"
-import Get from "./controller/GetProduto/index"
+import CadastroProduto from "./cadastro/PostProduto/index";
+import Get from "./controller/GetProduto/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AtualizarCliente from './cadastro/AtualizarCliente';
-import AtualizarProduto from "./cadastro/AtualizarProduto/index"
+import AtualizarProduto from './cadastro/AtualizarProduto/index';
 import "./styles.css"
 import NavBar from './Components/Navbar';
 
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
 
-      <GlobalStyle />
+    <GlobalStyle />
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Login} />
@@ -33,6 +34,7 @@ function App() {
         </Switch>
       </BrowserRouter>
       <img className="background" src="https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background.png?raw=true" />
+
 
 
     </>

@@ -1,0 +1,9 @@
+O site vai pedir um login, as informações estão contidas no arquivo "CartãoLogin"
+
+caso não entenda o que está escrito, o email = grupo5@admin.com e a senha = admin
+
+Obrigado!!
+
+
+
+
