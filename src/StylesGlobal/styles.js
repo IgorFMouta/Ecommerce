@@ -18,6 +18,5 @@ export default createGlobalStyle `
     body {
         background-repeat:no-repeat;
         background-color: #808080;
-        max-width: max-content;
     }
 `;

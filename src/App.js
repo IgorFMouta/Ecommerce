@@ -10,11 +10,9 @@ import Busca from './Busca/index';
 import CadastroProduto from "./cadastro/PostProduto/index"
 import Get from "./controller/GetProduto/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './Components/NavbarComp';
+
 import "./styles.css"
-
-
-
+import NavBar from './Components/Navbar';
 
 function App() {
 
@@ -23,15 +21,16 @@ function App() {
 
       <GlobalStyle />
       <BrowserRouter>
-      <NavbarComp />
         {/* <Pesquisa/> */}
-        <Switch>
-          <Route path="/busca" exact component={Busca} />
-          <Route path="/getClientes" exact component={GetCliente} />
-          <Route path="/getProduto" exact component={Get} />
-          <Route path="/cadastrarCliente" exact component={CadastroCliente} />
-          <Route path="/cadastrarProduto" exact component={CadastroProduto} />
+        <Switch>        
           <Route path="/" exact component={Login} />
+          <NavBar />
+        </Switch>
+        <Switch>
+            <Route path="/getClientes" exact component={GetCliente} />
+            <Route path="/getProduto" exact component={Get} />
+            <Route path="/cadastrarCliente" exact component={CadastroCliente} />
+            <Route path="/cadastrarProduto" exact component={CadastroProduto} />    
         </Switch>
       </BrowserRouter>
       <img className="background" src="https://github.com/RBaltar/Ecommerce/blob/main/src/StylesGlobal/img/Background.png?raw=true" />
