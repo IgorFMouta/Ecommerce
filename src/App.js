@@ -11,12 +11,18 @@ import Header from './StylesGlobal/Navbar-Footer/index';
 import CadastroProduto from "./cadastro/PostProduto/index"
 import Get from "./controller/GetProduto/index"
 
+import Header from './StylesGlobal/Navbar-Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComp from './Components/NavbarComp';
+
+
 
 
 function App() {
 
   return (
     <>
+
       <GlobalStyle />
       <Header />
       <BrowserRouter>
@@ -31,6 +37,9 @@ function App() {
           <Route path="/" exact component={Login} />
         </Switch>
       </BrowserRouter>
+
+      <NavbarComp />
+
     </>
   )
 }

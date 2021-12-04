@@ -27,12 +27,12 @@ input, button {
     background-color: #2e2e2e;
 }
 
-form {
+.formLogin {
     display: block;
     position: relative; 
 }
 
-form:after{
+.formLogin:after{
     content: '';
     display: block;
     position: absolute;
@@ -44,7 +44,7 @@ form:after{
     background-image: linear-gradient(to bottom right, #f5ff67, #ffa602);
 }
 
-form .form-inner {
+.formLogin .form-inner {
     position: relative;
     display: block;
         /*Cor de fundo do formulário*/
@@ -53,7 +53,7 @@ form .form-inner {
     z-index: 2;
 }
 
-form .form-inner h2 {
+.formLogin .form-inner h2 {
     /*Cor da letra do login*/
     color: rgb(253, 164, 0);
     font-size: 28px;
@@ -61,13 +61,13 @@ form .form-inner h2 {
     margin-bottom: 30px
 }
 
-form .form-inner .form-group{
+.formLogin .form-inner .form-group{
     display: block;
     width: 300px;
     margin-bottom: 15px;
 }
 
-.form-inner .form-group label {
+.form-inner .form-group .labelLogin {
     display: block;
     /*Cor das letras (Nome, Email, Senha)*/
     color: rgb(255, 187, 0);
@@ -76,12 +76,12 @@ form .form-inner .form-group{
     transition: 0.4s;
 }
 
-.form-inner .form-group:focus-within label {
+.form-inner .form-group:focus-within .labelLogin {
     /*Cor da letra quando seleciona*/
     color: #ffffe4
 }
 
-form .form-inner .form-group input {
+.formLogin .form-inner .form-group input {
     display: block;
     width: 100%;
     padding: 10px 15px;
@@ -91,12 +91,12 @@ form .form-inner .form-group input {
     transition: 0.4s;
 }
 
-form .form-inner .form-group input:focus {
+.formLogin .form-inner .form-group input:focus {
         /*Cor da borda das opções*/
     box-shadow: 1px 1px 5px #ffd900;
 }
 
-form .form-inner input[type="submit"],
+.formLogin .form-inner input[type="submit"],
 .welcome button {
     display: inline-block;
     padding: 10px 15px;
@@ -113,7 +113,7 @@ form .form-inner input[type="submit"],
     border: solid 1px #ffd900;
 }
 
-form .form-inner input[type="submit"]:hover,
+.formLogin .form-inner input[type="submit"]:hover,
 .welcome button:hover {
     /*Cor da letra do botão hover*/
     color: #ffbb33;
