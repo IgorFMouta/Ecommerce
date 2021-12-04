@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import api from "../../service/api";
-import "./style.css"
-import {Button} from "../../StylesGlobal/styles"
+import "./style.css";
+import {Button} from "../../StylesGlobal/styles";
+import {Link} from "react-router-dom";
 
 
   function GetCliente() {
@@ -39,7 +40,10 @@ import {Button} from "../../StylesGlobal/styles"
                 <p>Cidade: {cliente?.endereco.cidade}</p>
                 <p>Estado: {cliente?.endereco.estado}</p>
                 <p>Cep: {cliente?.endereco.cep}</p>
-                <Button onClick={()=> deletarCliente(cliente.id)}>Deletar item</Button>
+                <Button onClick={()=> deletarCliente(cliente.id)}>Deletar Cliente</Button>
+                <Link to={`/atualizarCliente/${cliente.id}`}>
+                  <Button>Atualizar Cliente</Button>
+                </Link>
               </div>
             )
           })}

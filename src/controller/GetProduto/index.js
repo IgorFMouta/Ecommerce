@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react"
-import api from "../../service/api"
-import "./styles.css"
-import {Button} from "../../StylesGlobal/styles"
-import {Link} from "react-router-dom"
+import { useState, useEffect } from "react";
+import api from "../../service/api";
+import "./styles.css";
+import {Button} from "../../StylesGlobal/styles";
+import {Link} from "react-router-dom";
 
 function Get() {
     const [produtos, setProdutos] = useState([]);
